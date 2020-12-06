@@ -8,13 +8,8 @@ import (
 	"syscall"
 )
 
-<<<<<<< HEAD
 func main()  {
 	lib.InitModule("./conf/dev/",[]string{"base","mysql","redis",})
-=======
-func main() {
-	lib.InitModule("./conf/dev/", []string{"base", "mysql", "redis"})
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 	defer lib.Destroy()
 	router.HttpServerRun()
 
@@ -23,8 +18,4 @@ func main() {
 	<-quit
 
 	router.HttpServerStop()
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0

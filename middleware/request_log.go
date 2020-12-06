@@ -58,8 +58,4 @@ func RequestLog() gin.HandlerFunc {
 		defer RequestOutLog(c)
 		c.Next()
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0

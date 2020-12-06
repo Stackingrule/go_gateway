@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -180,7 +179,3 @@ total 434168
 
 - 生成接口文档：`swag init`
 - 然后启动服务器：`go run main.go`，浏览地址: http://127.0.0.1:8880/swagger/index.html
-=======
-# go_gateway
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
-# go_gateway

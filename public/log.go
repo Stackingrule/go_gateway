@@ -8,15 +8,9 @@ import (
 
 //错误日志
 func ContextWarning(c context.Context, dltag string, m map[string]interface{}) {
-<<<<<<< HEAD
 	v:=c.Value("trace")
 	traceContext,ok := v.(*lib.TraceContext)
 	if !ok{
-=======
-	v := c.Value("trace")
-	traceContext, ok := v.(*lib.TraceContext)
-	if !ok {
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 		traceContext = lib.NewTrace()
 	}
 	lib.Log.TagWarn(traceContext, dltag, m)
@@ -24,15 +18,9 @@ func ContextWarning(c context.Context, dltag string, m map[string]interface{}) {
 
 //错误日志
 func ContextError(c context.Context, dltag string, m map[string]interface{}) {
-<<<<<<< HEAD
 	v:=c.Value("trace")
 	traceContext,ok := v.(*lib.TraceContext)
 	if !ok{
-=======
-	v := c.Value("trace")
-	traceContext, ok := v.(*lib.TraceContext)
-	if !ok {
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 		traceContext = lib.NewTrace()
 	}
 	lib.Log.TagError(traceContext, dltag, m)
@@ -40,15 +28,9 @@ func ContextError(c context.Context, dltag string, m map[string]interface{}) {
 
 //普通日志
 func ContextNotice(c context.Context, dltag string, m map[string]interface{}) {
-<<<<<<< HEAD
 	v:=c.Value("trace")
 	traceContext,ok := v.(*lib.TraceContext)
 	if !ok{
-=======
-	v := c.Value("trace")
-	traceContext, ok := v.(*lib.TraceContext)
-	if !ok {
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 		traceContext = lib.NewTrace()
 	}
 	lib.Log.TagInfo(traceContext, dltag, m)
@@ -86,11 +68,7 @@ func GetTraceContext(c context.Context) *lib.TraceContext {
 	if c == nil {
 		return lib.NewTrace()
 	}
-<<<<<<< HEAD
 	traceContext:=c.Value("trace")
-=======
-	traceContext := c.Value("trace")
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 	if tc, ok := traceContext.(*lib.TraceContext); ok {
 		return tc
 	}

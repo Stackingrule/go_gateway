@@ -15,11 +15,7 @@ func IPAuthMiddleware() gin.HandlerFunc {
 				isMatched = true
 			}
 		}
-<<<<<<< HEAD
 		if !isMatched{
-=======
-		if !isMatched {
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 			ResponseError(c, InternalErrorCode, errors.New(fmt.Sprintf("%v, not in iplist", c.ClientIP())))
 			c.Abort()
 			return

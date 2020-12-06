@@ -18,27 +18,16 @@
     log_level = "trace"         #日志打印最低级别
     [log.file_writer]           #文件写入配置
         on = true
-<<<<<<< HEAD
-        log_path = "./logs/go_gateway.inf.log"
-        rotate_log_path = "./logs/go_gateway.inf.log.%Y%M%D%H"
-        wf_log_path = "./logs/go_gateway.wf.log"
-        rotate_wf_log_path = "./logs/go_gateway.wf.log.%Y%M%D%H"
-=======
         log_path = "./logs/gin_scaffold.inf.log"
         rotate_log_path = "./logs/gin_scaffold.inf.log.%Y%M%D%H"
         wf_log_path = "./logs/gin_scaffold.wf.log"
         rotate_wf_log_path = "./logs/gin_scaffold.wf.log.%Y%M%D%H"
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
     [log.console_writer]        #工作台输出
         on = false
         color = false
 
 [swagger]
-<<<<<<< HEAD
-    title="go_gateway swagger API"
-=======
     title="gin_scaffold swagger API"
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
     desc="This is a sample server celler server."
     host="127.0.0.1:8880"
     base_path=""

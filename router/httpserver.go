@@ -24,11 +24,7 @@ func HttpServerRun() {
 		MaxHeaderBytes: 1 << uint(lib.GetIntConf("base.http.max_header_bytes")),
 	}
 	go func() {
-<<<<<<< HEAD
 		log.Printf(" [INFO] HttpServerRun:%s\n",lib.GetStringConf("base.http.addr"))
-=======
-		log.Printf(" [INFO] HttpServerRun:%s\n", lib.GetStringConf("base.http.addr"))
->>>>>>> 75546dc0f54b4f6d4ece0208a542fdec4d21faa0
 		if err := HttpSrvHandler.ListenAndServe(); err != nil {
 			log.Fatalf(" [ERROR] HttpServerRun:%s err:%v\n", lib.GetStringConf("base.http.addr"), err)
 		}
