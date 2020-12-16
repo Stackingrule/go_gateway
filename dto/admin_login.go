@@ -1,13 +1,17 @@
 package dto
 
 import (
-	"go_gateway/public"
 	"github.com/gin-gonic/gin"
+	"go_gateway/public"
 )
 
 type AdminLoginInput struct {
-	UserName string `json:"username" form:"username" comment:"姓名" example:"admin" validate:"required"`
-	Password string `json:"password" form:"username" comment:"密码" example:"123456" validate:"required"`
+	UserName string `json:"username" form:"username" comment:"管理员用户名" example:"admin" validate:"required,is_valid_username"`
+	Password string `json:"password" form:"password" comment:"密码" example:"123456" validate:"required"`
+}
+
+type AdminLoginOutput struct {
+	Token string `json:"token" form:"token" comment:"token" example:"token" validate:""`
 }
 
 func (param *AdminLoginInput) BindValidParam(c *gin.Context) error {
