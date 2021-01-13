@@ -54,7 +54,7 @@ func (adminLogin *AdminLoginController) AdminLogin(c *gin.Context) {
 	seeInfo := &dto.AdminSessionInfo{
 		ID:        admin.Id,
 		UserName:  admin.UserName,
-		LoginTine: time.Now(),
+		LoginTime: time.Now(),
 	}
 	sessBts, err := json.Marshal(seeInfo)
 	if err != nil {

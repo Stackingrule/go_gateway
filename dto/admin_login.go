@@ -18,7 +18,7 @@ type AdminLoginOutput struct {
 type AdminSessionInfo struct {
 	ID        int       `json:"id"`
 	UserName  string    `json:"username"`
-	LoginTine time.Time `json:"logintine"`
+	LoginTime time.Time `json:"logintime"`
 }
 
 func (param *AdminLoginInput) BindValidParam(c *gin.Context) error {
