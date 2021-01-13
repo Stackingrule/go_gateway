@@ -30,7 +30,7 @@ func (t *Admin) LoginCheck(c *gin.Context, tx *gorm.DB, param *dto.AdminLoginInp
 	}
 	saltPassword := public.GenSaltPassword(adminInfo.Salt, param.Password)
 	if adminInfo.Password != saltPassword {
-		return nil, errors.New("密码错误,请重新输入")
+		return nil, errors.New("密码错误，请重新输入")
 	}
 	return adminInfo, nil
 }
@@ -42,4 +42,8 @@ func (t *Admin) Find(c *gin.Context, tx *gorm.DB, search *Admin) (*Admin, error)
 		return nil, err
 	}
 	return out, nil
+}
+
+func (t *Admin) Save(c *gin.Context, tx *gorm.DB) error {
+	return tx.SetCtx(public.GetGinTraceContext(c)).Save(t).Error
 }
